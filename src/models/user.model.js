@@ -24,6 +24,10 @@ const userSchema = new Schema({
             trim:true,
             index:true
         },
+        password:{
+            type: String,
+            required: [true,"Pass is req"]
+         },
         avatar:{
             type:String,
             required:true,
@@ -37,10 +41,6 @@ const userSchema = new Schema({
                 ref:"Video"
             }
         ],
-        password:{
-            type:String,
-            required:[true,'Password is req']
-        },
         refreshToken:{
             type:String
         }
